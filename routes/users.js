@@ -1,5 +1,6 @@
 const express = require('express');
 const router = express.Router();
+const gravatar = require('gravatar');
 const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
 const config = require('config');
@@ -12,7 +13,7 @@ const User = require('../models/User');
 router.post(
   '/',
   [
-    check('name', 'Please add your name').not().isEmpty(),
+    check('username', 'Please add a username').not().isEmpty(),
     check('email', 'Please include a valid email').isEmail(),
     check(
       'password',
@@ -26,7 +27,7 @@ router.post(
       return res.status(400).json({ errors: errors.array() });
     }
 
-    const { name, email, password } = req.body;
+    const { username, email, password } = req.body;
 
     try {
       let user = await User.findOne({ email });
@@ -35,7 +36,15 @@ router.post(
         return res.status(400).json({ msg: 'User already exists' });
       }
 
-      user = new User({ name, email, password });
+      // get user's gravatar
+      const avatar = gravatar.url(email, {
+        s: '200', // size of the avatar
+        r: 'pg', // rating
+        d: 'mm', // default icon
+      });
+
+      // create new user object
+      user = new User({ username, email, password, avatar });
 
       // hash the user's password
       const salt = await bcrypt.genSalt(10);
@@ -55,7 +64,7 @@ router.post(
         payload,
         config.get('jwtSecret'),
         {
-          expiresIn: 3600, // expires in one hour
+          expiresIn: 7200, // expires in two hours
         },
         (err, token) => {
           if (err) throw err;
