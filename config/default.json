@@ -1,0 +1,4 @@
+{
+  "mongoURI": "mongodb+srv://Pascale:pascaleGereCetteApp11102020@onestopcontacts.fivks.mongodb.net/one-stop-contacts?retryWrites=true&w=majority",
+  "jwtSecret": "le secret des tokens de l'application one-stop-contacts"
+}
