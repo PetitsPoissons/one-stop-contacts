@@ -21,7 +21,7 @@ const ContactSchema = mongoose.Schema({
   avatar: {
     type: String,
   },
-  email: {
+  emailPrimary: {
     type: String,
   },
   emailOther: {
