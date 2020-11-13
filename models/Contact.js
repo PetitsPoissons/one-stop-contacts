@@ -5,13 +5,13 @@ const ContactSchema = mongoose.Schema({
     type: mongoose.Schema.Types.ObjectId,
     ref: 'user',
   },
-  firstname: {
+  nameFirst: {
     type: String,
   },
-  lastname: {
+  nameLast: {
     type: String,
   },
-  surrogateName: {
+  nameOther: {
     type: String,
   },
   type: {

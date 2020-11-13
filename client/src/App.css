@@ -4,10 +4,12 @@
 :root {
   --primary-color: #0294a5;
   --dark-color: #03353e;
-  --light-color: #a79c93;
+  --light-color: #f7f9fb;
   --danger-color: #c1403d;
   --success-color: #78d6ac;
   --yellow-color: #edd170;
+  --beige-color: #a79c93;
+  --black-color: #04060f;
 }
 
 * {
@@ -20,8 +22,8 @@ body {
   font-family: 'Roboto', sans-serif;
   font-size: 1rem;
   line-height: 1.6;
-  background-color: #f7f9fb;
-  color: #04060f;
+  background-color: var(--beige-color);
+  color: var(--dark-color);
 }
 
 a {
