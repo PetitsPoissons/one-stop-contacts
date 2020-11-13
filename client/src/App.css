@@ -389,7 +389,7 @@ table th {
 
 /* Animation (Add After) */
 .item-enter {
-  opacity: 0;
+  opacity: 0.01;
 }
 .item-enter-active {
   opacity: 1;
@@ -397,9 +397,11 @@ table th {
 }
 .item-exit {
   opacity: 1;
+  /* transform: translateX(0); */
 }
 .item-exit-active {
-  opacity: 0;
+  opacity: 0.01;
+  /* transform: translateX(1000px); */
   transition: opacity 1000ms ease-in;
 }
 

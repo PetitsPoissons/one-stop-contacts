@@ -44,18 +44,12 @@ export default (state, action) => {
         ...state,
         filtered: state.contacts.filter((contact) => {
           const regex = new RegExp(`${action.payload}`, 'gi');
-          console.log('regex', regex);
-          console.log('contact.nameFirst', contact.nameFirst);
-          console.log(
-            'contact.nameFirst.match(regex)',
-            contact.nameFirst.match(regex)
-          );
           return (
-            contact.nameFirst.match(regex) ||
-            contact.nameLast.match(regex) ||
-            contact.nameOther.match(regex) ||
-            contact.emailPrimary.match(regex) ||
-            contact.emailOther.match(regex)
+            (contact.nameFirst && contact.nameFirst.match(regex)) ||
+            (contact.nameLast && contact.nameLast.match(regex)) ||
+            (contact.nameOther && contact.nameOther.match(regex)) ||
+            (contact.emailPrimary && contact.emailPrimary.match(regex)) ||
+            (contact.emailOther && contact.emailOther.match(regex))
           );
         }),
       };
