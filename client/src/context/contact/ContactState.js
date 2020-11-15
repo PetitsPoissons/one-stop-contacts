@@ -86,10 +86,14 @@ const ContactState = (props) => {
       },
     };
     try {
-      const res = await axios.put(`/api/contacts/${contact._id}`, contact, config);
+      const res = await axios.put(
+        `/api/contacts/${contact._id}`,
+        contact,
+        config
+      );
       dispatch({
         type: UPDATE_CONTACT,
-        payload: res.data,    // payload is updated contact
+        payload: res.data, // payload is updated contact
       });
     } catch (err) {
       dispatch({
@@ -97,8 +101,6 @@ const ContactState = (props) => {
         payload: err.response.msg,
       });
     }
-  };
-
   };
 
   // Clear contacts
