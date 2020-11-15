@@ -7,6 +7,15 @@
   --light-color: #fff7ec;
   --danger-color: #d70060;
   --success-color: #01a4a4;
+  --bleu-nuit: #19233c; /* rgb(25,35,60) */
+  --bleu-clair: #173348; /* rgb(23,51,72) */
+  --bleu-clair: #29aae3; /* rgb(41,170,227) */
+  --vert-fluo: #00ff01; /* rgb(0,255,1) */
+  --jaune: #fdee21; /* rgb(253,238,33) */
+  --orange: #fbb03b; /* rgb(251,176,59) */
+  --rouge: #fe0000; /* rgb(254,0,0) */
+  --rouge-nuit: #471c30; /* rgb(71,28,48) */
+  --magenta: #93268f; /* rgb(147,38,143) */
 }
 
 * {
@@ -21,7 +30,7 @@ body {
   line-height: 1.6;
   background-color: var(--light-color);
   color: var(--dark-color);
-  background-image: url(./assets/hex_pattern_2560.jpg);
+  /* background-image: url(./assets/bg_hex_multicolor_2560.jpg); */
 }
 
 a {
