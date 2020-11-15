@@ -2,14 +2,11 @@
 
 /* Global Styles */
 :root {
-  --primary-color: #0294a5;
-  --dark-color: #03353e;
-  --light-color: #f7f9fb;
-  --danger-color: #c1403d;
-  --success-color: #78d6ac;
-  --yellow-color: #edd170;
-  --beige-color: #a79c93;
-  --black-color: #04060f;
+  --primary-color: #328daa; /*0294a5// 00A1CB*/
+  --dark-color: #454752;
+  --light-color: #fff7ec;
+  --danger-color: #d70060;
+  --success-color: #01a4a4;
 }
 
 * {
@@ -22,8 +19,9 @@ body {
   font-family: 'Roboto', sans-serif;
   font-size: 1rem;
   line-height: 1.6;
-  background-color: var(--beige-color);
+  background-color: var(--light-color);
   color: var(--dark-color);
+  background-image: url(./assets/hex_pattern_2560.jpg);
 }
 
 a {
@@ -32,7 +30,7 @@ a {
 }
 
 a:hover {
-  color: var(--yellow-color);
+  color: #666;
 }
 
 ul {
@@ -389,7 +387,7 @@ table th {
 
 /* Animation (Add After) */
 .item-enter {
-  opacity: 0.01;
+  opacity: 0;
 }
 .item-enter-active {
   opacity: 1;
@@ -397,15 +395,28 @@ table th {
 }
 .item-exit {
   opacity: 1;
-  /* transform: translateX(0); */
 }
 .item-exit-active {
-  opacity: 0.01;
-  /* transform: translateX(1000px); */
+  opacity: 0;
   transition: opacity 1000ms ease-in;
 }
 
 /* Mobile Styles */
+@media (max-width: 1440px) {
+  body {
+    background-image: url(./assets/hex_pattern_1440.jpg);
+  }
+}
+@media (max-width: 1024px) {
+  body {
+    background-image: url(./assets/hex_pattern_1024.jpg);
+  }
+}
+@media (max-width: 768px) {
+  body {
+    background-image: url(./assets/hex_pattern_768.jpg);
+  }
+}
 @media (max-width: 700px) {
   .hide-sm {
     display: none;
@@ -443,5 +454,10 @@ table th {
   .navbar ul {
     text-align: center;
     justify-content: center;
+  }
+}
+@media (max-width: 375px) {
+  body {
+    background-image: url(./assets/hex_pattern_375.jpg);
   }
 }
