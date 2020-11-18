@@ -327,6 +327,14 @@ textarea {
   border: 1px solid #ccc;
 }
 
+/* spp-added Forms section */
+input:focus,
+select:focus,
+textarea:focus {
+  outline: none;
+  border-color: var(--primary-color);
+}
+
 input[type='submit'],
 button {
   font: inherit;
