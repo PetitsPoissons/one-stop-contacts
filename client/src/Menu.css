@@ -75,3 +75,76 @@
 .menu-wrap .toggler:checked:hover + .hamburger > div {
   transform: rotate(225deg);
 }
+
+/* Show Menu */
+.menu-wrap .toggler:checked ~ .menu {
+  visibility: visible;
+}
+
+.menu-wrap .toggler:checked ~ .menu > div {
+  transform: translateX(0);
+  transition-duration: var(--menu-speed);
+}
+
+.menu-wrap .toggler:checked ~ .menu > div > div {
+  opacity: 1;
+  transition: opacity 0.4s ease 0.4s;
+}
+
+.menu-wrap .menu {
+  position: fixed;
+  top: 0;
+  width: 50%;
+  height: 100%;
+  visibility: hidden;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.menu-wrap .menu > div {
+  background: linear-gradient(
+    to right,
+    var(--dark-color) 30%,
+    rgba(23, 51, 72, 1) 55%,
+    rgba(34, 76, 107, 1) 70%,
+    rgba(47, 103, 145, 0.95) 80%,
+    rgba(41, 170, 227, 0.9) 93%,
+    rgba(116, 204, 242, 0.85) 97%,
+    rgba(251, 176, 59, 0.8) 100%
+  );
+  /* background: linear-gradient(to right, #19233c 0%, #29aae3 100%); */
+  width: 50vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: translateX(-50vw);
+  transition: all 0.4s ease;
+}
+
+.menu-wrap .menu > div > div {
+  text-align: center;
+  max-width: 90vw;
+  max-height: 100vh;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.menu-wrap .menu > div > div > ul > li {
+  list-style: none;
+  color: var(--light-color);
+  font-size: 3rem;
+  padding: 1rem;
+}
+
+.menu-wrap .menu > div > div > ul > li > a {
+  color: inherit;
+  text-decoration: none;
+  transition: color 0.4s ease;
+}
+
+.menu-wrap .menu > div > div > ul > li > a:hover {
+  color: var(--warning-color);
+}

@@ -27,13 +27,13 @@
   --overlay1-color: rgb(23, 51, 72, 0.9);
   --overlay2-color: rgb(71, 28, 48, 0.9);
   /*--bleu-nuit: #19233c;  rgb(25,35,60) */
-  /*--bleu-ombre: #173348; /* rgb(23,51,72) */
+  --bleu-ombre: #173348; /* rgb(23,51,72)
   /*--bleu-clair: #29aae3;  rgb(41,170,227) */
   /*--vert-fluo: #00ff01;  rgb(0,255,1) */
   --jaune: #fdee21; /* rgb(253,238,33) */
   /*--orange: #fbb03b;  rgb(251,176,59) */
   --rouge: #fe0000; /* rgb(254,0,0) */
-  /*--magenta-nuit: #471c30;  rgb(71,28,48) */
+  --magenta-nuit: #471c30; /*rgb(71,28,48) */
   --magenta: #93268f; /* rgb(147,38,143) */
 }
 
@@ -151,7 +151,7 @@ input[type='password'] {
   margin: 1.2rem 0;
   padding: 1rem;
   font-size: 1.6rem;
-  /* box-shadow: inset 1px 1px var(--dark-color); */
+  box-shadow: inset 1px 1px #444;
 }
 
 .btn-login:hover,
