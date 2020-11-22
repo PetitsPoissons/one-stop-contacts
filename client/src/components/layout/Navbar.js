@@ -40,11 +40,21 @@ const Navbar = ({ title, icon }) => {
   );
 
   return (
-    <div className="navbar bg-primary">
-      <h1>
-        <i className={icon} /> {title}
-      </h1>
-      <ul>{isAuthenticated ? authLinks : guestLinks}</ul>
+    <div className="menu-wrap">
+      <input type="checkbox" className="toggler" />
+      <div className="hamburger">
+        <div></div>
+      </div>
+      <div className="menu">
+        <div>
+          <div>
+            {/* <h3>
+              <i className={icon} /> {title}
+            </h3> */}
+            <ul>{isAuthenticated ? authLinks : guestLinks}</ul>
+          </div>
+        </div>
+      </div>
     </div>
   );
 };

@@ -45,50 +45,52 @@ const Register = (props) => {
   };
 
   return (
-    <div className="form-container">
-      <h1>
-        Account <span className="text-primary">Register</span>
-      </h1>
-      <form onSubmit={onSubmit}>
-        <div className="form-group">
-          <label htmlFor="username">Username</label>
-          <input
-            type="text"
-            name="username"
-            value={username}
-            onChange={onChange}
-          />
+    <div className="hex-container">
+      <div className="register-container">
+        <div className="form-auth">
+          <form onSubmit={onSubmit}>
+            <input
+              placeholder="Enter a username"
+              type="text"
+              name="username"
+              value={username}
+              onChange={onChange}
+            />
+
+            <input
+              placeholder="Enter an email"
+              type="email"
+              name="email"
+              value={email}
+              onChange={onChange}
+            />
+
+            <input
+              placeholder="Enter a password"
+              type="password"
+              name="password"
+              value={password}
+              onChange={onChange}
+              minLength="6"
+            />
+
+            <input
+              placeholder="Confirm your password"
+              type="password"
+              name="password2"
+              value={password2}
+              onChange={onChange}
+              minLength="6"
+            />
+
+            <input
+              type="submit"
+              value="REGISTER"
+              className="btn btn-dark btn-block btn-register"
+            />
+          </form>
         </div>
-        <div className="form-group">
-          <label htmlFor="email">Email</label>
-          <input type="email" name="email" value={email} onChange={onChange} />
-        </div>
-        <div className="form-group">
-          <label htmlFor="password">Password</label>
-          <input
-            type="password"
-            name="password"
-            value={password}
-            onChange={onChange}
-            minLength="6"
-          />
-        </div>
-        <div className="form-group">
-          <label htmlFor="password2">Confirm password</label>
-          <input
-            type="password"
-            name="password2"
-            value={password2}
-            onChange={onChange}
-            minLength="6"
-          />
-        </div>
-        <input
-          type="submit"
-          value="Register"
-          className="btn btn-primary btn-block"
-        />
-      </form>
+      </div>
     </div>
   );
 };

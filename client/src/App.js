@@ -12,6 +12,8 @@ import AuthState from './context/auth/AuthState';
 import AlertState from './context/alert/AlertState';
 import setAuthToken from './utils/setAuthToken';
 import './App.css';
+import './Menu.css';
+import './Utilities.css';
 
 if (localStorage.token) {
   setAuthToken(localStorage.token);
@@ -24,8 +26,9 @@ const App = () => {
         <AlertState>
           <Router>
             <Fragment>
-              <Navbar />
               <div className="container">
+                <Navbar />
+
                 <Alerts />
                 <Switch>
                   <PrivateRoute exact path="/" component={Home} />
