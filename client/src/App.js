@@ -12,7 +12,9 @@ import AuthState from './context/auth/AuthState';
 import AlertState from './context/alert/AlertState';
 import setAuthToken from './utils/setAuthToken';
 import './App.css';
-import './Menu.css';
+import './Forms.css';
+import './Hamburger.css';
+import './Mobile.css';
 import './Utilities.css';
 
 if (localStorage.token) {
@@ -28,7 +30,6 @@ const App = () => {
             <Fragment>
               <div className="container">
                 <Navbar />
-
                 <Alerts />
                 <Switch>
                   <PrivateRoute exact path="/" component={Home} />
